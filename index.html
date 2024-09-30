@@ -59,14 +59,31 @@
 // Increment the humanScore or computerScore variable based on the round winner.
     function playRound(humanChoice, computerChoice){
         /* */
-        humanChoice.toLowerCase();
         if (humanChoice === "Rock"){
             if (computerChoice === "Rock"){
-                console.log("Tie! Both players chose Rock.");
+                console.log("Tie! Both players chose Rock!");
             } else if (computerChoice === "Paper"){
                 console.log("You lose! Paper covers Rock!");
             } else {
                 console.log("You win! Rock crushes Scissors!");
+            }
+        }
+        if (humanChoice === "Paper"){
+            if (computerChoice === "Rock"){
+                console.log("You win! Paper covers Rock!");
+            } else if (computerChoice === "Paper"){
+                console.log("Tie! Both players chose Paper!");
+            } else {
+                console.log("You lose! Scissors cuts Paper!");
+            }
+        }
+        if (humanChoice === "Scissors"){
+            if (computerChoice === "Rock"){
+                console.log("You lose! Rock crushes Scissors!");
+            } else if (computerChoice === "Paper"){
+                console.log("You win! Scissors cuts Paper!");
+            } else {
+                console.log("Tie! Both players chose Scissors!");
             }
         }
         
