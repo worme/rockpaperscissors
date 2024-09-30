@@ -58,7 +58,8 @@
 // Write the code for your playRound function to console.log a string value representing the round winner, such as: “You lose! Paper beats Rock”.
 // Increment the humanScore or computerScore variable based on the round winner.
     function playRound(humanChoice, computerChoice){
-        /* */
+        /* This function takes the choices made by both players, compares them, and returns a string with the result. */
+        
         if (humanChoice === "Rock"){
             if (computerChoice === "Rock"){
                 console.log("Tie! Both players chose Rock!");
@@ -94,11 +95,13 @@
         }
         
     }
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
 
-    playRound(humanSelection, computerSelection);
-    console.log(humanScore, computerScore)
+    // Tests:
+    // const humanSelection = getHumanChoice();
+    // const computerSelection = getComputerChoice();
+
+    // playRound(humanSelection, computerSelection);
+    // console.log(humanScore, computerScore)
 
 // Step 6: Write the logic to play the entire game
 // Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
@@ -109,5 +112,21 @@
 // Hint: When you assign a function call to a variable, the return value of that function is assigned to the variable. Accessing the variable afterward will only provide the assigned value; it doesn’t recall the function. You need to recall the choice functions to get new choices for each round.
 // Re-work your previous functions or create more helper functions if necessary. Specifically, you may want to change the return values to something more useful.
 // If you already know about loops, you can use them. If not, don’t worry! Loops will be covered in the next lesson.
+    function playGame(){
+        /* This function is the main game loop.*/
+        
+        while (humanScore < 5 && computerScore < 5) {
+            console.log("SCORE - Human: " + humanScore + " Computer: " + computerScore);
+            playRound(getHumanChoice(), getComputerChoice());
+        } 
+        if (humanScore === 5) {
+            console.log("Congratulations, you win the game!");
+        } else {
+            console.log("Sorry, you lost the game to an inanimate object. Whammy!")
+        }
+        
+    }
+
+    playGame();
 
 </script>
