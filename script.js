@@ -68,15 +68,16 @@ function playRound(humanChoice, computerChoice){
 function playGame(){
     /* This function is the main game loop.*/
     
-    while (humanScore < 5 && computerScore < 5) {
-        console.log("SCORE - Human: " + humanScore + " Computer: " + computerScore);
-        playRound(getHumanChoice(), getComputerChoice());
-    } 
-    if (humanScore === 5) {
-        console.log("Congratulations, you win the game!");
-    } else {
-        console.log("Sorry, you lost the game to an inanimate object. Whammy!")
-    }
+    //The logic for exactly 5 rounds:
+    // while (humanScore < 5 && computerScore < 5) {
+    //     console.log("SCORE - Human: " + humanScore + " Computer: " + computerScore);
+    //     playRound(getHumanChoice(), getComputerChoice());
+    // } 
+    // if (humanScore === 5) {
+    //     console.log("Congratulations, you win the game!");
+    // } else {
+    //     console.log("Sorry, you lost the game to an inanimate object. Whammy!")
+    // }
     
 }
 
